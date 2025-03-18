@@ -2,6 +2,7 @@ version: '3'
 services:
     app:
         build: .
+        image: ghcr.io/alexandr-horton/courses-top:develop
         container_name: courses-top
         restart: always
         ports:

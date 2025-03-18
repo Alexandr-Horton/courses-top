@@ -1,7 +1,7 @@
 import '../styles/globals.css';
 import Head from 'next/head';
 import Router from 'next/router';
-import React, { useEffect } from 'react';
+import React from 'react';
 import ym from 'react-yandex-metrika';
 import { YMInitializer } from 'react-yandex-metrika';
 import type { AppProps } from 'next/app';
@@ -15,19 +15,6 @@ Router.events.on('routeChangeComplete', (url: string) => {
 
 function App({ Component, pageProps }: AppProps) {
     const router = useRouter();
-
-    useEffect(() => {
-        // Handle route change events
-        const handleRouteChange = () => {
-            // You can add any route change logic here
-        };
-
-        router.events.on('routeChangeComplete', handleRouteChange);
-
-        return () => {
-            router.events.off('routeChangeComplete', handleRouteChange);
-        };
-    }, [router]);
 
     return (
         <>
