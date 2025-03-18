@@ -18,7 +18,7 @@ jobs:
               uses: elgohr/Publish-Docker-Github-Action@v4
               with:
                   registry: ghcr.io
-                  name: ghcr.io/alexander-horton/courses-top
+                  name: ghcr.io/${{ github.repository_owner }}/courses-top
                   username: ${{ github.actor }}
                   password: ${{ secrets.GITHUB_TOKEN }}
                   tags: 'develop'
